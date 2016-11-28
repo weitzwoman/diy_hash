@@ -35,4 +35,14 @@ describe(MyHash) do
     end
   end
 
+  describe("#merge") do
+    it("returns key and values in combined hash") do
+      test_hash = MyHash.new()
+      test_hash2 = MyHash.new()
+      test_hash.myStore("octopus", "handsy")
+      test_hash2.myStore("wolf", "bitey")
+      expect(test_hash.merge(test_hash2)).to(eq(["octopus", "wolf", "handsy", "bitey"]))
+    end
+  end
+
 end
