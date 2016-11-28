@@ -41,7 +41,7 @@ describe(MyHash) do
       test_hash2 = MyHash.new()
       test_hash.myStore("octopus", "handsy")
       test_hash2.myStore("wolf", "bitey")
-      expect(test_hash.merge(test_hash2)).to(eq(["octopus", "wolf", "handsy", "bitey"]))
+      expect(test_hash.merge(test_hash2)).to(eq("octopus=>handsy, wolf=>bitey"))
     end
   end
 

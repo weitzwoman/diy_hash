@@ -35,9 +35,6 @@ class MyHash
   end
 
   define_method(:merge) do |hash2|
-    # for each key in hash2, push that key onto key of hash1 (self)
-    # do the same thing for values
-    #method that returns key array from hash2
     hash2Keys = hash2.keys()
     hash2Values = hash2.values()
 
@@ -49,7 +46,15 @@ class MyHash
       @value.push(value)
     end
 
-    @key + @value
-  end
+    output_string = ""
 
+    @key.each do |item|
+      if item != @key.last
+        output_string += item + "=>" + self.myFetch(item) + ", "
+      else
+        output_string += item + "=>" + self.myFetch(item)
+      end
+    end
+    output_string
+  end
 end
