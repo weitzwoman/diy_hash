@@ -27,4 +27,12 @@ describe(MyHash) do
     end
   end
 
+  describe("#length") do
+    it("returns fixNum of number of key-value pairs in hash") do
+      test_hash = MyHash.new()
+      test_hash.myStore("octopus", "handsy")
+      expect(test_hash.length()).to(eq(1))
+    end
+  end
+
 end

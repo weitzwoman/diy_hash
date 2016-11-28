@@ -21,4 +21,8 @@ class MyHash
   define_method(:has_value?) do |value|
     @value.include?(value)
   end
+
+  define_method(:length) do
+    @key.length()
+  end
 end
