@@ -10,4 +10,13 @@ describe(MyHash) do
       expect(test_hash.myFetch("dog")).to(eq("funny"))
     end
   end
+
+  describe("#has_key?") do
+    it("returns true if hash has a key") do
+      test_hash = MyHash.new()
+      test_hash.myStore("dog", "funny")
+      expect(test_hash.has_key?("dog")).to(eq(true))
+    end
+  end
+
 end
